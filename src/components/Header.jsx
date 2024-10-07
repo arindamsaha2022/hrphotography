@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import navlogo from '../assets/navlogo.png'
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav>
       <h1 className='item'>
-        <Link to="/"><img src="../src/assets/navlogo.png" className="logo" alt="logo" /></Link>
+        <Link to="/"><img src={navlogo} className="logo" alt="logo" /></Link>
       </h1>
      
       {/* Toggle button for menu */}
