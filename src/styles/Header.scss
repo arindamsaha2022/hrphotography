@@ -1,0 +1,131 @@
+@import "colors"; // Assuming $first, $second, and $third are defined in "colors.scss"
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(103, 103, 103);
+    color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    padding: 10px;
+
+    z-index: 100;
+    
+    
+
+    .call{
+       
+    //    background-color: $second;
+       padding: 10px;
+       border: solid black;
+       border-radius: 30px;
+       color: #fff;
+       cursor: pointer;
+       
+    }
+    
+    .logo {
+        width: 150px;
+        height: auto;
+    
+        @media (min-width: 768px) {
+          width: 200px;
+        }
+    
+        @media (min-width: 1024px) {
+          width: 250px;
+        }
+      }
+    
+    .title {
+        font-size: 1.5rem;
+        margin: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+    }
+
+    ul {
+        display: flex;
+        
+        li {
+            list-style: none;
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: white;
+                padding: 0.5rem;
+                margin: 0 0.5rem;
+                border-radius: 0.5rem;
+                background-color: transparent; // Default background
+
+                &:not(.active):hover {
+                    background-color: $second;
+                }
+            }
+        }
+
+        .active {
+            background-color: $third;
+        }
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 0.75rem;
+        right: 0.5rem;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 2.25rem;
+        height: 2rem;
+
+        span {
+            height: 0.4rem;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 0.2rem;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+       
+
+       .call{
+        justify-content: center;
+        text-align: center;
+        
+       }
+
+        .menu {
+            display: flex;           
+            
+        }
+
+        ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 0.25rem;
+
+            &.open {
+                display: flex;
+            }
+
+            li {
+                width: 100%;
+                text-align: center;
+
+                a {
+                    margin: 0.2rem 0.5rem;
+                }
+            }
+        }
+    }
+}
