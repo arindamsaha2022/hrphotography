@@ -1,223 +1,302 @@
-.members{
+.members {
   background: #A4A4A4;
-  background: -moz-linear-gradient(-45deg, #A4A4A4 0%, #CBCBCB 0%, #000000 100%);
-  background: -webkit-linear-gradient(-45deg, #A4A4A4 0%, #CBCBCB 0%, #000000 100%);
   background: linear-gradient(135deg, #A4A4A4 0%, #CBCBCB 0%, #000000 100%);
 }
+
 .cards-containers {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; 
-    padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  padding: 2rem;
 
-    justify-content: center;
-  
-    .cards {
-      background-color: #000;
-      border-radius: 15px;
-      width: 300px;
-      margin: 1rem; 
-      color: white;
-      overflow: hidden;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-  
-    //   &:hover {
-    //     transform: translateY(-10px);
-    //   }
-  
-      img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-      }
-  
-      .card-content {
-        padding: 1rem;
-  
-        h2 {
-          font-size: 1.5rem;
-          margin-bottom: 0.5rem;
-        }
-  
-        p {
-          font-size: 1rem;
-          margin-bottom: 1rem;
-        }
+  .cards {
+    background-color: #000;
+    border-radius: 15px;
+    width: 300px; /* Default width */
+    margin: 1rem; 
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 
-  
-        .arrow-button {
-            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-          border: none;
-          border-radius: 50%;
-          width: 40px;
-          height: 40px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          transition: background-color 0.3s;
-          .fa{
-            font-size:2em !important;
-            color: white;
-          }
-  
-          &:hover {
-            background-color: #d6b70f;
-          }
-        }
-      }
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
     }
-  
-    // Media query for medium devices (tablets)
-    @media (max-width: 768px) {
-      justify-content: center; 
-      .card {
-        width: 90%; 
+
+    .card-content {
+      padding: 1rem;
+
+      h2 {
+        font-size: 1.5rem; /* Default font size */
+        margin-bottom: 0.5rem;
       }
-    }
-  
-    // Media query for small devices (phones)
-    @media (max-width: 480px) {
-      flex-direction: column; 
-      
-      .card {
-        width: 100%; 
-        margin: 0.5rem 0; 
+
+      p {
+        font-size: 1rem; /* Default font size */
+        margin-bottom: 1rem;
       }
-  
-      img {
-        height: 150px; 
-      }
-  
-      .card-content h2 {
-        font-size: 1.2rem; 
-      }
-  
-      .card-content p {
-        font-size: 0.9rem;
-      }
-  
+
       .arrow-button {
-        width: 30px;
-        height: 30px;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        .fa {
+          font-size: 2em !important;
+          color: white;
+        }
+
+        &:hover {
+          background-color: #d6b70f;
+        }
       }
     }
   }
 
-.copy{
+  // Media query for medium devices (tablets)
+  @media (max-width: 768px) {
+    .cards {
+      width: 90%; /* Make cards full width */
+    }
+  }
+
+  // Media query for small devices (phones)
+  @media (max-width: 480px) {
+    flex-direction: column; 
+    
+    .cards {
+      width: 100%; /* Full width on small screens */
+      margin: 0.5rem 0; 
+    }
+
+    img {
+      height: 150px; 
+    }
+
+    .card-content h2 {
+      font-size: 1.2rem; 
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+    }
+
+    .arrow-button {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.copy {
   background-color: #000;
   display: flex;
+  flex-direction: column; /* Allow for responsive stacking */
+  align-items: center; /* Center items */
   
-  h1{
+  h1 {
     color: white;
     padding: 4%;
-    font-family: "Roboto" , sans-serif;
+    font-family: "Roboto", sans-serif;
     text-align: center;
   }
-  p{
+
+  p {
     color: white;
     padding: 5%;
-    font-family: "Roboto" , sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: large;
     text-align: center;
-    
   }
-  .mdl{
-    height: 600px;
+
+  .mdl {
+    height: auto;
     align-items: flex-end;
-    
   }
-  .cam{
+
+  .cam {
     height: 500px;
     align-items: flex-end;
   }
-}
-.sample{
-  background-color: #000;
-  text-align: center;
-  
-    padding-bottom: 10px;
-  
-  h1{
-    color: white;
-  }
 
-  .sampleImage{
-    height: 300px;
-    padding: 2%;
-    // max-width: fit-content;
-    // margin-left: auto;
-    // margin-right: auto;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .copy {
-    display: flex;
-    flex-wrap: wrap;
-    
-    .mdl{
+  // Media query for small devices (phones)
+  @media (max-width: 600px) {
+    flex-direction: column; /* Stack on small screens */
+
+    .mdl {
+      height: auto; /* Adjust height */
+      width: 150px;
       max-width: fit-content;
       margin-left: auto;
       margin-right: auto;
-     
-    
     }
-    .cam{
-      height: 200px;
-      // width: 300px;
-     margin-left: 10px;
-    }
-   
-  }
- .sample{
-  // display: flex;
-  .img{
-    // display: flex;
-    img{
-      height: 200px;
-    }
-  }
- }
 
+    .cam {
+      height: 200px; /* Adjust height */
+      margin-left: 10px;
+    }
+  }
 }
-.handle{
-  font-size:3em !important;
-}
-.socialMedia{
-  h1{
+
+.sample {
+  background-color: #000;
+  text-align: center;
+  padding-bottom: 10px;
+
+  h1 {
     color: white;
   }
-  div{
-    a{
+
+  .sampleImage {
+    height: 300px;
+    padding: 2%;
+  }
+
+  // Media query for small devices (phones)
+  @media (max-width: 600px) {
+    .sampleImage {
+      height: 200px; /* Adjust height for smaller screens */
+    }
+  }
+}
+
+.handle {
+  font-size: 3em !important;
+}
+
+.socialMedia {
+  h1 {
+    color: white;
+  }
+
+  div {
+    a {
       padding: 3%;
     }
   }
-  // max-width: fit-content;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      background-color: #000;
-   h3{
+
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: #000;
+
+  h3 {
     color: #ffff;
     padding-bottom: 1%;
-    a{
+    
+    a {
       color: #ffff;
       text-decoration: underline;
     }
-   }
-   .insta{
+  }
+
+  .insta {
     color: #d6249f;
-   }
-   .facebook{
+  }
+
+  .facebook {
     color: #285AEB;
-   }
-   .youtube{
+  }
+
+  .youtube {
     color: red;
-   }
- 
+  }
 }
 
+
+// social media did by samir 
+.socialMedia {
+  background-color: #1a1a1a; /* Dark background for contrast */
+  padding: 1rem; /* Reduced padding for a smaller footer */
+  text-align: center; /* Center-align text */
+  border-top: 2px solid #d6249f; /* Top border for separation */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Lighter shadow for depth */
+  margin: 0 auto; /* Center the footer */
+  max-width: 100%; /* Full width */
+  
+  h1 {
+    color: #ffffff; /* White color for heading */
+    font-size: 1.5rem; /* Smaller font size */
+    margin: 0.5rem 0; /* Reduced space below heading */
+  }
+
+  div {
+    display: flex; /* Flexbox for icons */
+    justify-content: center; /* Center icons */
+    gap: 1rem; /* Space between icons */
+    margin: 0.5rem 0; /* Reduced space below icons */
+    
+    a {
+      color: #ffffff; /* Default color for links */
+      font-size: 2rem; /* Size of icons */
+      transition: transform 0.3s ease, color 0.3s ease; /* Smooth transitions */
+      
+      &:hover {
+        transform: translateY(-3px); /* Lift effect on hover */
+        color: #d6b70f; /* Change color on hover */
+      }
+    }
+  }
+
+  h3 {
+    color: #e4e4e4; /* Lighter color for subheadings */
+    font-size: 1rem; /* Size of contact information */
+    margin: 0.3rem 0; /* Reduced space above and below */
+    
+    a {
+      color: #ffffff; /* Link color */
+      text-decoration: underline; /* Underline for links */
+      transition: color 0.3s ease; /* Smooth color transition */
+      
+      &:hover {
+        color: #d6b70f; /* Change link color on hover */
+      }
+    }
+  }
+
+  // Responsive design
+  @media (max-width: 768px) {
+    padding: 0.5rem; /* Further reduce padding on smaller screens */
+
+    h1 {
+      font-size: 1.3rem; /* Smaller heading size */
+    }
+
+    div {
+      gap: 0.5rem; /* Smaller gap between icons */
+    }
+
+    h3 {
+      font-size: 0.9rem; /* Smaller font size for contact info */
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.5rem; /* Keep padding small for mobile */
+    
+    h1 {
+      font-size: 1.2rem; /* Smaller heading size */
+    }
+
+    div {
+      flex-direction: column; /* Stack icons on top of each other */
+      gap: 0.3rem; /* Smaller gap for vertical stacking */
+    }
+
+    h3 {
+      font-size: 0.8rem; /* Smaller font size for contact info */
+    }
+  }
+}

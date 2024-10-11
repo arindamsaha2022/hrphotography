@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
+import Footer from './pages/Footer'
 
 function App() {
 
@@ -21,9 +22,7 @@ function App() {
         <Route path="/Services" element={<Services/>} />          
         <Route path="/work" element={<Work/>} />          
       </Routes>
-      <footer>
-        <p>made by Arindam Saha. Phone:  <a href="tel:9775169334">9775169334</a></p>
-      </footer>
+     <Footer />
     </Router>
   )
 }
