@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "../styles/bottom.scss";
-import { IoIosMail } from "react-icons/io";
 import { FaInstagram,FaFacebookSquare,FaYoutube,FaPhone,} from "react-icons/fa";
 
 // Import local images
@@ -62,9 +61,9 @@ const Bottoms = () => {
          <img src={Model2} className='cam' alt="mq"/>
         </div>
         <Cards/>
-        <div className='sample'>
+        <div className='sample sm:flex sm:flex-col sm:items-center'>
           <h1>Our Work</h1>
-          <div className='img'>
+          <div className='img '>
           <img src={S1} className='sampleImage' alt="sample"/>
           <img src={S2} className='sampleImage' alt="sample"/>
           <img src={S3} className='sampleImage' alt="sample"/>
@@ -76,7 +75,7 @@ const Bottoms = () => {
         </div>
 
         <div className='members'>
-        <h1>Team Members:</h1>
+        <h1>Team Members :</h1>
       <div className="cards-containers">
         
         {people.map((person, index) => (
@@ -96,17 +95,7 @@ const Bottoms = () => {
       </div>
       
       </div>
-      <div className='socialMedia'>
-        <h1>Our socialMedia handles</h1>
-        <div>
-        <a href="https://www.instagram.com/itz_rupam_s_?igsh=c3plOHV1OGhta2di"><FaInstagram className='insta  handle' /></a>
-        <a href="https://www.facebook.com/share/aJoxBf6rYpzE3EEi/?mibextid=qi2Omg"><FaFacebookSquare className='facebook handle' /></a>
-        <a href=""><FaYoutube className='youtube handle'  /></a>
-        </div>
-       
-        <h3>Mali:   <a href="mailto:hrcreation9641@gmail.com">hrcreation9641@gmail.com<IoIosMail  /></a></h3>
-        <h3>Phone:  <a href="tel:8167014165">8167014165<FaPhone/></a></h3>
-      </div>
+     
  
     </div>
   );

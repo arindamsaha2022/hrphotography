@@ -1,42 +1,55 @@
 .gallery-container {
-    padding: 2rem;
-    text-align: center;
-  
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-      color: #333; // Customize the color
-    }
-  
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Responsive grid
-      gap: 1.5rem;
-  
-      .gallery-item {
-        position: relative;
-        overflow: hidden;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.3s ease;
-  
-          &:hover {
-            transform: scale(1.1);
-          }
+  padding: 2rem;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333; // Customize the color
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Responsive grid
+    gap: 1.5rem;
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      img {
+        width: 100%;
+        height: auto; // Maintain aspect ratio
+        object-fit: cover;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
         }
       }
     }
-  
-    // Add responsive adjustments if necessary
-    @media (max-width: 768px) {
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem; // Adjust font size for smaller screens
+    }
+
+    .gallery-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // Adjust grid for smaller screens
     }
   }
-  
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.75rem; // Further adjust for very small screens
+    }
+
+    .gallery-grid {
+      grid-template-columns: 1fr; // Single column layout
+    }
+  }
+}
