@@ -75,7 +75,7 @@ const Bottoms = () => {
         </div>
 
         <div className='members'>
-        <h1>Team Members:</h1>
+        <h1>Team Members :</h1>
       <div className="cards-containers">
         
         {people.map((person, index) => (
