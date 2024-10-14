@@ -21,7 +21,7 @@ function App() {
         <Route path="/Services" element={<Services/>} />          
         <Route path="/work" element={<Work/>} />          
       </Routes>
-      <footer>
+      <footer style={{textAlign:"center"}}>
         <p>made by Arindam Saha. Phone:  <a href="tel:9775169334">9775169334</a></p>
       </footer>
     </Router>
