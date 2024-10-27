@@ -69,10 +69,10 @@ const Bottoms = () => {
           <img src={S2} className='sampleImage' alt="sample"/>
           <img src={S3} className='sampleImage' alt="sample"/>
           </div>
-          <Link to="/work"><button class="button-34" role="button">More Sample → </button></Link>
-          
-         
         {/* <Video/> */}
+        </div>
+        <div class="button-container">
+         <button class="button-86" role="button">More Samples</button>
         </div>
 
         <div className='members'>
